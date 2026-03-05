@@ -25,22 +25,36 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero!")
     return a / b
 
+feature-modulo
 def modulo(a, b):
     """Return the remainder when a is divided by b."""
     if b == 0:
         raise ValueError("Cannot divide by zero!")
     return a % b
 
+def power(a, b):
+    """Raise a to the power of b."""
+    return a ** b
+ main-browser
+
 
 
 def main():
     """Main function to run the calculator."""
     print("Welcome to the Simple Calculator!")
+feature-modulo
     print("Operations: +, -, *, /, %")
     
     try:
         num1 = float(input("Enter first number: "))
         operator = input("Enter operator (+, -, *, /, %): ")
+
+    print("Operations: +, -, *, /, ^")
+    
+    try:
+        num1 = float(input("Enter first number: "))
+        operator = input("Enter operator (+, -, *, /, ^): ")
+main-browser
         num2 = float(input("Enter second number: "))
         
         if operator == "+":
@@ -51,8 +65,13 @@ def main():
             result = multiply(num1, num2)
         elif operator == "/":
             result = divide(num1, num2)
+ feature-modulo
         elif operator == "%":
             result = modulo(num1, num2)
+
+        elif operator == "^":
+            result = power(num1, num2)
+ main-browser
         else:
             print("Invalid operator!")
             return
